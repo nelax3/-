@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>党群服务中心-主页</title>
+    <style type="text/css">
+        /*党群服务阵地*/
+        .tubiao{
+            position: absolute;
+            top: 28px;
+            width: 100px;
+            left: 490px;
+        }
+        /*轮播图*/
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            background-repeat: no-repeat;
+        }
+        .carousel {
+            position: relative;
+            width: 36%;
+            height: 377px;
+            padding-top: 10px;
+            float: left;
+            margin-left: 5px;
+            margin-right: 10px;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .item {
+            flex: 0 0 100%;
+            height: 55vh;
+        }
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /*左右控制*/
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 80px;
+            z-index: 10;
+            cursor: pointer;
+        }
+        .left {
+            left: 25px;
+        }
+        .right {
+            right: 25px;
+        }
+        /*底部小点*/
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            z-index: 15;
+            width: 60%;
+            padding-left: 0;
+            margin-left: -30%;
+            text-align: center;
+            list-style: none;
+        }
+        .dots > li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 1px;
+            cursor: pointer;
+            background-color: rgba(0,0,0,0);
+            border: 1px solid #fff;
+            border-radius: 10px;
+        }
+        .dots .active {
+            width: 12px;
+            height: 12px;
+            margin: 0;
+            background-color: #fff;
+        }
+        /*首页导航文字*/
+        .index-text{
+            position:absolute;
+            top: 85%;
+            transition: all 0.5s ease;
+        }
+        .index-text1:hover{
+            transform: scale(1.1);
+            margin-left: -35px;
+        }
+        .index-text2:hover{
+
+            transform: scale(1.1);
+            margin-left: -50px;
+        }
+        .index-text3:hover{
+
+            transform: scale(1.1);
+            margin-left: -70px;
+        }
+        .index-text4:hover{
+
+            transform: scale(1.1);
+            margin-left: -85px;
+        }
+        .index-text5:hover{
+            transform: scale(1.1);
+            margin-left: -100px;
+        }
+        /*搜索*/
+        .img-sousuo{
+            transition: opacity 0.5s ease;
+        }
+        .img-sousuo:hover{
+           opacity: 0.6;
+        }
+        /*综合新闻列表*/
+        .newlist{
+            position: auto;
+            float: left;
+            margin-top: 10px;
+            height: 375px;
+            width: 53%;
+			background-color: #FCFCFC;
+			border-top: 3px solid red;
+			border-bottom: 3px solid red;
+            font-size: large;
+            padding: auto;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+        }
+        /*时间*/
+        .time-top{
+        color: rgb(49, 47, 47);
+        font-size: 10px;
+        width: 110px;
+        height: 50px;
+        text-align: center;
+        position: absolute;
+        top: 10%;
+        left: 90%;
+        }
+        /*列表特效*/
+        .list{
+            transition: all 0.5s ease 0.1s;
+        }
+        .list1:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list2:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list3:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list4:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list5:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list6:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list7:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list8:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list9:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list10:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list11:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list12:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list13:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        .list14:hover{
+            background-color: rgb(185, 182, 182);
+        }
+        /*意见征集*/
+        #div1 {
+        width: 90px;
+        height: 90px;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+      }
+      #div1 img {
+        width: 90px;
+        height: 90px;
+      }
+      /*页脚*/
+      .web-bottom{
+        background-color:#fff;
+        height: 20px;
+        width: 600px;
+        position: absolute;
+        margin-top: 3px;
+        margin-left: 560px;
+        color: gray;
+        font-size: 12px;
+      }
+    </style>
+</head>
+ 
+<body>
+<header>
+  <div class="imgbox">
+    <div style="position:relative;">
+    <img src="./images/首页顶部.jpg" width=100% height="200px">
+    <div class="tubiao">
+        <a href="./index.html"><img src="./images/党群服务阵地.png" alt="党群服务阵地" style="height: 120px; width: 520px;"></a>
+    </div>
+    <div class="index-text">
+        <div class="index-text1">
+        <a href="./index.html" class="shouye" style=" color: white; position:absolute; z-index:10; left:370px; font-size: 20px;width:50px;" >首页</a>
+        </div>
+        <div class="index-text2">
+        <a href="./机构介绍.html" style="position:absolute; color: rgb(248, 245, 245); z-index:10; left:520px; top:85%; font-size: 20px;width:90px">机构介绍</a>
+        </div>
+        <div class="index-text3">
+        <a href="#" onclick="alert('暂未开放')" style="position:absolute; z-index:10;color: rgb(248, 245, 245); left:690px; top:85%;  font-size: 20px;width:90px">思想引领</a>
+        </div>
+        <div class="index-text4">
+        <a href="#" onclick="alert('暂未开放')" style="position:absolute; z-index:10;color: rgb(248, 245, 245); left:870px; top:85%; font-size: 20px;width:90px">政务公开</a>
+        </div>
+        <div class="index-text5">
+        <a href="https://www.xuexi.cn/index.html" onclick='return confirm("是否要跳转到学习强国？");' style="position:absolute;top: 85%; color: rgb(248, 245, 245);z-index:10; left:1070px;font-size: 20px;width:90px">学习强国</a>
+        <div id="myModal" class="modal">
+        </div>
+        </div>
+    </div>
+       <div class="img-sousuo">
+        <a href="./搜索.html" ><img src="./images/搜索.png" style="width: 7%;height: 30px; position: absolute; top: 9%; left: 90%;"></a>
+       </div>
+  </div>
+</header>
+    <div class="carousel" id="carousel">
+        <div class="carousel-inner">
+            <div class="item">
+                <img src="./images/二十大报告.jpg" >
+            </div>
+            <div class="item">
+                <img src="./images/二十届三中.jpg" >
+            </div>
+            <div class="item">
+                <img src="./images/党内统计.png" >
+            </div>
+            <div class="item">
+                <img src="./images/基本知识.jpg" >
+            </div>
+    </div>
+        <div class="carousel-control left" onclick="prevSlide()">&lsaquo;</div>
+        <div class="carousel-control right" onclick="nextSlide()">&rsaquo;</div>
+        <div class="dots">
+            <li class="active" onclick="jumpToSlide(0)"></li>
+            <li onclick="jumpToSlide(1)"></li>
+            <li onclick="jumpToSlide(2)"></li>
+            <li onclick="jumpToSlide(3)"></li>
+            <li onclick="jumpToSlide(4)"></li>
+        </div>
+    </div>
+    <div class="newlist" >
+            <label class="t1">
+                <span style="font-size: 28px; color:brown; font-family:'Trebuchet MS';"><strong>综</strong></span>
+            </label>
+            <label class="t1">
+                <span style="font-size: 28px; color:brown; font-family:'Trebuchet MS';"><strong>合</strong></span>
+            </label>
+            <label class="t1">
+                <span style="font-size: 28px; color:brown; font-family:'Trebuchet MS';"><strong>新</strong></span>
+            </label>
+            <label class="t1">
+                <span style="font-size: 28px; color:brown; font-family:'Trebuchet MS';"><strong>闻</strong></span>
+            </label>
+            <label style="float: right;margin-top: 5px;margin-right: 15px;"><a href="#" style="color: rgb(115, 115, 115);">更多</a></label>
+            <hr>
+        <ul class="list">
+            <li class="list1">
+                <a href="#"  title="和音：开启中巴关系下一个“黄金五十年”" style="color: rgb(158, 56, 76); ">和音：开启中巴关系下一个“黄金五十年”</a>
+                <label class="time" style="float: right;">2024-11-21</label>
+            </li>
+            <li class="list2">
+                    <a href="#" title="第二届中国期刊高质量发展论坛在长沙举办" style="color: rgb(158, 56, 76);">第二届中国期刊高质量发展论坛在长沙举办</a>
+                    <label class="time" style="float: right;">2024-11-21</label>
+            </li>
+            <li class="list3">
+                   <a href="./为党建引领基层治理提供社会学支撑.html" title="黄晓春-为党建引领基层治理提供社会学支撑" style="color: rgb(158, 56, 76);">黄晓春-为党建引领基层治理提供社会学支撑</a>
+                   <label class="time" style="float: right;">2024-11-20</label>
+            </li>
+            <li class="list4">
+                <a href="./我国新能源电池回收利用产业成熟度不断提升.html" title="我国新能源电池回收利用产业成熟度不断提升" style="color: rgb(158, 56, 76);">我国新能源电池回收利用产业成熟度不断提升</a>
+                <label class="time" style="float: right;">2024-11-20</label>
+         </li>
+         <li class="list5">
+            <a href="#" title="2024年出版学科专业共建工作交流会在京召开" style="color: rgb(158, 56, 76);">2024年出版学科专业共建工作交流会在京召开</a>
+            <label class="time" style="float: right;">2024-11-19</label>
+         </li>
+         <li class="list6">
+            <a href="#" title="北京延庆：野鸭湖成“候鸟天堂”" style="color: rgb(158, 56, 76);">北京延庆：野鸭湖成“候鸟天堂”</a>
+            <label class="time" style="float: right;">2024-11-19</label>
+         </li>
+         <li class="list7">
+            <a href="#" title="广东惠州大亚湾为贵州黔西南州捐赠御寒物资" style="color: rgb(158, 56, 76);">广东惠州大亚湾为贵州黔西南州捐赠御寒物资</a>
+            <label class="time" style="float: right;">2024-11-18</label>
+         </li>
+         <li class="list8">
+            <a href="#" title="河南三门峡：家门口看专家号 群众看病有“医”靠" style="color: rgb(158, 56, 76);">河南三门峡：家门口看专家号 群众看病有“医”靠</a>
+            <label class="time" style="float: right;">2024-11-18</label>
+         </li>
+         <li class="list9">
+            <a href="#" title="贵州：“企业之家”激活民营经济内生动力" style="color: rgb(158, 56, 76);">贵州：“企业之家”激活民营经济内生动力</a>
+            <label class="time" style="float: right;">2024-11-18</label>
+         </li>
+         <li class="list10">
+            <a href="#" title="江西全南：培育特色产业 激活乡村活力" style="color: rgb(158, 56, 76);">江西全南：培育特色产业 激活乡村活力</a>
+            <label class="time" style="float: right;">2024-11-17</label>
+         </li>
+         <li class="list11">
+            <a href="#" title="江西：推进社会化服务 助力农民增收" style="color: rgb(158, 56, 76);">江西：推进社会化服务 助力农民增收</a>
+            <label class="time" style="float: right;">2024-11-17</label>
+         </li>
+         <li class="list12">
+            <a href="#" title="2024年出版学科专业共建工作交流会在京召开" style="color: rgb(158, 56, 76);">2024年出版学科专业共建工作交流会在京召开</a>
+            <label class="time" style="float: right;">2024-11-17</label>
+         </li>
+         <li class="list13">
+            <a href="#" title="习近平会见马来西亚总理安瓦尔" style="color: rgb(158, 56, 76);">习近平会见马来西亚总理安瓦尔</a>
+            <label class="time" style="float: right;">2024-11-16</label>
+         </li>
+         <li class="list14">
+            <a href="#" title="习近平参观秦汉简牍：善加保护，做好研究" style="color: rgb(158, 56, 76);">习近平参观秦汉简牍：善加保护，做好研究</a>
+            <label class="time" style="float: right;">2024-11-16</label>
+         </li>
+        </ul>
+        </div>
+        <div class="erweima">
+            <img src="./images/关注二维码.jpg" alt="关注二维码" style="float: left; height: 377px; width: 9%;margin-top: 10px;">
+        </div> 
+    </div>
+    <div class="web-bottom-image">
+        <div class="bottom-image1">
+            <img src="./images/不忘初心.jpg" alt="不忘初心，牢记使命" style="height: 142px;width: 49.5%;margin-left: 5px; margin-top: 2px;">
+        </div>
+        <div class="bottom-image2">
+            <img src="./images/学习党的二十届三中全会.png" alt="学习党的二十届三中全会" style="height: 142px;width: 50%;float: right; margin-top: -146px;">
+        </div>
+        <div id="div1">
+            <img id="ad" src="./images/我要建议.png" alt="我要建议" />
+            <button onclick="closeAd()" style="font-size: 10px;">关闭</button>
+        </div>
+    </div>
+    <div class="time-top" id="time-top"></div>
+    <footer>
+        <div class="web-bottom">
+            <p>版权所有--盗版也追究不了&nbsp;&nbsp;&nbsp;&nbsp;章宁 22本软件3班 202299010658 web期末作品 党服网站</p>
+        </div>
+    </footer>
+</body>
+    <script type="text/javascript">
+        /*轮播图*/
+        let items = document.querySelectorAll('.item');
+        let current = 0;
+        function showSlide() {
+            items.forEach(item => {
+                item.style.transform = `translateX(-${current * 100}%)`;
+            });
+            updateDots();
+        }
+        function prevSlide() {
+            if (current > 0) {
+                current--;
+            } else {
+                current = items.length - 1;
+            }
+            showSlide();
+        }
+        function nextSlide() {
+            if (current < items.length - 1) {
+                current++;
+            } else {
+                current = 0;
+            }
+            showSlide();
+        }
+        let timer = setInterval(nextSlide, 1500);
+        function pauseTimer() {
+            clearInterval(timer);
+        }
+        function resumeTimer() {
+            timer = setInterval(nextSlide, 1500);
+        }
+        document.getElementById('carousel').addEventListener('mouseover', pauseTimer);
+        document.getElementById('carousel').addEventListener('mouseout', resumeTimer);
+        let dots = document.querySelectorAll('.dots li'); 
+        function updateDots() {
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            dots[current].classList.add('active');
+        }
+        function jumpToSlide(index) {
+            current = index;
+            showSlide();
+            updateDots();
+        }
+        /*意见征集*/
+        window.onload = function () {
+              //获取元素
+              var div1 = document.getElementById("div1");
+              var w = document.documentElement.clientWidth;
+              var h = document.documentElement.clientHeight;
+              var gox = 1;
+              var goy = 1;
+              //广告漂浮
+              function move() {
+                var x = div1.offsetLeft;
+                var y = div1.offsetTop;
+                if (x > w - 300 || x < 0) gox = -gox;
+                div1.style.left = x + 10 * gox + "px";
+                if (y > h - 300 || y < 0) goy = -gox
+                div1.style.top = y + 10 * goy + "px";
+              }
+              //漂浮定时器
+              var timer = setInterval(move, 200);
+              //移入移出时广告的浮动
+              div1.onmouseover = function () {
+                clearInterval(timer);
+              };
+              div1.onmouseout = function () {
+                timer = setInterval(move, 200);
+              };
+              //点击一次跳转到另一个页面，点击两次广告消失
+              ad.onclick = function () {
+                var neww = window.open("_blank");
+                neww.location = "http://www.12380.gov.cn/";
+              };
+            };
+            function closeAd() {
+              var div1 = document.getElementById("div1");
+              div1.style.display = "none";
+            }
+        /*时间*/
+        function getTime() {
+            var date = new Date();
+            // 年、月、日
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+            // 时、分、秒
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            // 实时显示
+            var element = document.getElementById('time-top');
+            element.innerHTML = '<h1>' + year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+        }
+        setInterval('getTime()', 1000);
+    </script>
+</html>

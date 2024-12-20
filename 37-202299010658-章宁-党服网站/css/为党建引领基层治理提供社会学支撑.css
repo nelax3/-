@@ -1,0 +1,87 @@
+body{
+    overflow-x: hidden;
+}
+/*党群服务阵地*/
+.tubiao{
+    position: absolute;
+    top: 28px;
+    width: 100px;
+    left: 490px;
+}
+/*首页导航文字*/
+.index-text{
+    position:absolute;
+    top: 85%;
+    transition: all 0.5s ease;
+}
+.index-text1:hover{
+    transform: scale(1.1);
+    margin-left: -35px;
+}
+.index-text2:hover{
+
+    transform: scale(1.1);
+    margin-left: -50px;
+}
+.index-text3:hover{
+
+    transform: scale(1.1);
+    margin-left: -70px;
+}
+.index-text4:hover{
+
+    transform: scale(1.1);
+    margin-left: -85px;
+}
+.index-text5:hover{
+    transform: scale(1.1);
+    margin-left: -100px;
+}
+.text1{
+    height: 250px;
+    width: 1200px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 170px;
+    height: 600px;
+}
+h1 {
+    color: red;
+    font-size: 30px;
+}
+  /*搜索*/
+  .img-sousuo{
+    transition: opacity 0.5s ease;
+}
+.img-sousuo:hover{
+   opacity: 0.6;
+}
+   /*底部图片特效*/
+   .img-bottom3{
+    transition: all 0.5s ease 0.1s;
+}
+.img-bottom31:hover{
+    transform: scale(1.02);
+}.img-bottom32:hover{
+    transform: scale(1.02);
+}
+.img-bottom4{
+    transition: all 0.5s ease 0.1s;
+}
+.img-bottom41:hover{
+    transform: scale(1.02);
+}
+.img-bottom42:hover{
+    transform: scale(1.02);
+}
+/*页脚*/
+.web-bottom{
+background-color:#fff;
+height: 20px;
+width: 600px;
+position: absolute;
+margin-top: 145px;
+margin-left: 560px;
+color: gray;
+font-size: 12px;
+}

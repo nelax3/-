@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>党群服务中心构介绍</title>
+</head>
+     <style>
+        /*党群服务阵地*/
+        .tubiao{
+            position: absolute;
+            top: 28px;
+            width: 100px;
+            left: 490px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            background-repeat: no-repeat;
+        }
+        .carousel {
+            position: absolute;
+            left: 40px;
+            top: 70px;
+            width: 550px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .item {
+            flex: 0 0 100%;
+            height: 60vh;
+        }
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .left {
+            left: 25px;
+        }
+        .right {
+            right: 25px;
+        }
+        .dots {
+            position: relative;
+            left: 340px;
+            top: 390px;
+            z-index: 15;
+            width: 60%;
+            padding-left: 0px;
+            margin-left: -30%;
+            text-align: center;
+            list-style: none;
+        }
+        .dots > li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 1px;
+            cursor: pointer;
+            background-color: rgba(0,0,0,0);
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+        .dots .active {
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+            background-color: white;
+        }
+        /*搜索*/
+        .img-sousuo{
+            transition: opacity 0.5s ease;
+        }
+        .img-sousuo:hover{
+           opacity: 0.6;
+        }
+        /*马陆党群服务中心*/
+        .malu{
+            background-color: brown;
+            width: 1200px;/*75.4%*/
+            height: 40px;
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0%;
+        }
+        /*简介*/
+        .newlist{
+            position:absolute;
+            margin-top: 2px;
+            margin-left: 6px;
+            left: 585px;
+            height: 398px;
+            width: 580px;
+			background-color: #FCFCFC;
+            font-size: large;
+            padding: auto;
+            border-top: solid 2px brown;
+            border-bottom: solid 2px brown;
+        }
+        /*整个简介*/
+        .jieshao{
+            background-color: white;
+            width: 1200px;
+            height: 760px;
+            position: absolute;
+            left: 150px;
+            top: 230px;
+        }
+        /*党群活动标题*/
+        .list-title{
+            border-left: solid 5px brown;
+            background-color: #FCFCFC;
+            position: relative;
+            font-size: 20px;
+            margin-top: 425px;
+            margin-left: 40px;
+            width: 1132px;
+            font-family: 'Trebuchet MS';
+            text-indent: 20px;
+        }
+        /*党群活动内容*/
+        .list{
+        position: relative;
+        margin-left: 45px;
+        margin-top: 20px;
+        background-color: #fffbfb;
+        height: 140px;
+        width: 245px;
+        border: solid 2px gray;
+        float: left;
+        color: rgb(49, 49, 49);
+        }
+        /*内容鼠标向上移动*/
+        .list:hover {
+            margin-top: 12px;
+        }
+        /*返回*/
+        .return{
+            position: absolute;
+            top: 715px;
+            left: 1087px;
+            float: left;
+            width: 80px;
+            height: 40px;
+            margin-left: 10px;
+            margin: 5px;
+        }
+        /*页脚*/
+      .web-bottom{
+        background-color:#fff;
+        height: 20px;
+        width: 600px;
+        position: absolute;
+        margin-top: 350px;
+        margin-left: 560px;
+        color: gray;
+        font-size: 12px;
+      }
+     </style>
+<body>
+<header>
+<div class="imgbox">
+    <div style="position:relative;">
+        <img src="./images/机构介绍背景.png" width=100% height="650px">
+        <div class="tubiao">
+            <a href="./index.html"><img src="./images/党群服务阵地.png" alt="党群服务阵地" style="height: 120px; width: 520px;"></a>
+        </div>
+    </div>
+        <div class="img-sousuo">
+            <a href="./搜索.html" ><img src="./images/搜索.png" style="width: 7%;height: 30px; position: absolute; top: 9%; left: 90%;"></a>
+        </div>
+</div>
+</header>
+ <div class="jieshao">
+        <div class="malu1">
+        <h1 class="malu" style="text-align: center; font-size: 30px; font-family:cursive; color: #FCFCFC;">马陆镇党群服务中心</h1>
+        </div>
+        <div class="carousel" id="carousel" >
+            <div class="carousel-inner">
+                <div class="item" >
+                    <img src="./images/白银社区1.jpg" >
+                </div>
+                <div class="item" >
+                    <img src="./images/白银社区2.jpg" >
+                </div>
+                <div class="item" >
+                    <img src="./images/白银社区3.jpg" >
+                </div>
+                <div class="item" >
+                    <img src="./images/白银社区4.jpg" >
+                </div>
+                <div class="item" >
+                    <img src=".//images/白银社区5.jpg" >
+                </div>
+            </div>
+        </div>
+            <div class="dots">
+                <li class="active" onclick="jumpToSlide(0)"></li>
+                <li onclick="jumpToSlide(1)"></li>
+                <li onclick="jumpToSlide(2)"></li>
+                <li onclick="jumpToSlide(3)"></li>
+                <li onclick="jumpToSlide(4)"></li>
+            </div>
+    <div class="newlist" >
+        <label class="t1">
+            <span style="font-size: 28px; color:brown; font-family:'Trebuchet MS';"><strong>&nbsp;&nbsp;&nbsp;&nbsp;中&nbsp;心&nbsp;简&nbsp;介</strong></span>
+        </label>
+        <hr>
+        <div class="text" style="height: 270px; overflow-x:hidden;overflow-y: scroll; margin-left: 25px; margin-right: 25px;">
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;党群服务中心是基层党建和基层治理的实体支撑，是党联系服务群众的重要平台。近年来，嘉定区以“群众的需求在哪里，党的阵地就覆盖到哪里，党的服务就延伸到哪里”为出发点，对标党群服务阵地体系功能建设要求，不断探索和深化公共空间领域党建，加快完善嘉定环城河及横沥河沿岸党群服务阵地布局，着力把阵地建在沿岸群众需要的地方、建在区域发展的活跃地带，积极推动全区基层党建与城市发展深度融合，通过串点成线、连线成带、辐射成圈，创新打造“一圈一带”党群服务阵地体系（“一圈”：嘉定环城河，“一带”：嘉定横沥河），以“全链式推进、全方位整合、全链条延伸”为抓手，切实打通联系服务党员群众的“最后一米”。</p>
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;嘉定区“一圈一带”党群服务阵地体系建设，最初创设于嘉定环城河步道建设工程的贯通。为打通沿线各种“断点”“堵点”，嘉定区相关部门通过广泛征询民意、添加门禁系统、增设步行桥和栈道等方式，实现步道贯通。贯通工程完成后，为及时回应人民城市建设要求，将沿河闲置、空关的公园管理用房进行重新规划和修缮提升，先后打造了南城墙公园、儿童公园、紫藤园、银杏园以及西大街党群服务站，形成了“一圈一带”党群服务阵地体系的雏形——嘉定环城河党群服务体系。2023年，随着东大街党群服务站的规划建设，进一步填补了环城河东北段的“空白”，该服务体系也得到了全面升级。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;为发挥党群服务阵地政治引领功能、强化基层党建服务功能、深化党建带群建促社建功能、优化为民服务功能，嘉定区“一圈一带”党群服务阵地体系结合“15分钟社区生活圈”建设以及沿岸市民群众的多元需求，在提供基层党建服务之外，汇聚党政机关、群团组织、企事业单位、社会组织等资源以及广大党员群众的自身特长，积极探索融合“党建+政务服务”“党建+文体服务”“党建+便民服务”“党建+专业服务”“党建+自治共治服务”等五大类服务，服务对象覆盖各领域、各行业和各年龄。如嘉定环城河西大街党群服务站设立“代表直通车”“寻锦记”“心愿墙”等市民意见收集点。嘉定环城河银杏园党群服务站同步挂牌“银耆耀邻工作室”，积极助力老干部工作，鼓励老干部建言献策助力基层治理。嘉定横沥河未来坊党群服务中心设置了大学生红创基地，吸引一批自主创业大学生团队入驻共享办公区。同时，引入本土公益基金，依托党群服务阵地这一平台，开展系列公益文化服务。</p>
+        </div>
+        <hr>
+        <div class="adress-0" style="width: 150px; margin-left: 50px; margin-top: 12px;">
+            <div class="adress-1">
+                <span><strong>地址</strong></span>
+            </div>
+            <div class="adress-2">
+                <span style="font-size: 16px;">上海市嘉定区众芳路58号</span>
+            </div>
+        </div>
+        <div class="time-0" style="width: 200px;margin-left: 220px;margin-top: -74px;">
+            <div class="time-1">
+                <span><strong>服务时间</strong></span>
+            </div>
+            <div class="time-2">
+                <span style="font-size: 16px;">周一至周五上午8:30-11:00;下午13:00-17:00</span>
+            </div>
+        </div>
+        <div class="phone-0" style="width: 250px;margin-left: 440px;margin-top: -74px;">
+            <div class="phone-1">
+                <span><strong>联系电话</strong></span>
+            </div>
+            <div class="phone-2">
+                <span style="font-size: 16px;">021-39153069</span>
+            </div>
+        </div>
+    </div>
+    <h1 class="list-title">党群活动</h1>  
+    <hr style="color: gray;width: 1132px; margin-top: 15px; margin-left: 40px;">
+    <div class="active1">
+        <ul class="list-active" id="list-active" style="float: left;">
+            <li class="list">
+                <h1 style="text-align: center; font-size: 25px;">组织生活会</h1>
+                <div class="active-time">
+                    <img src="./images/时钟.svg" style="margin-left: 15px; margin-top: 20px;">
+                    <span style="margin-left:5px;">2024-12-03 13:00-14:00</span>
+                </div>
+                <div class="active-map">
+                    <img src="./images/定位.svg" style="margin-left: 15px;margin-top: 10px;">
+                    <span style="margin-left: 5px;">嘉定区洪德路115号</span>
+                </div>
+                <div class="active-text">
+                    <span style="margin-top: 15px; float: right; margin-right: 10px;">类型：组织生活</span>
+                </div>
+            </li>
+            <li class="list">
+                <h1 style="text-align: center; font-size: 25px;">书法课堂</h1>
+                <div class="active-time">
+                    <img src="./images/时钟.svg" style="margin-left: 15px; margin-top: 20px;">
+                    <span style="margin-left:5px;">2024-12-02 13:00-14:00</span>
+                </div>
+                <div class="active-map">
+                    <img src="./images/定位.svg" style="margin-left: 15px;margin-top: 10px;">
+                    <span style="margin-left: 5px;">嘉定区洪德路115号</span>
+                </div>
+                <div class="active-text">
+                    <span style="margin-top: 15px; float: right; margin-right: 10px;">类型：文化活动</span>
+                </div>
+            </li>
+            <li class="list">
+                <h1 style="text-align: center; font-size: 25px;">养生讲堂</h1>
+                <div class="active-time">
+                    <img src="./images/时钟.svg" style="margin-left: 15px; margin-top: 20px;">
+                    <span style="margin-left:5px;">2024-12-01 13:00-14:00</span>
+                </div>
+                <div class="active-map">
+                    <img src="./images/定位.svg" style="margin-left: 15px;margin-top: 10px;">
+                    <span style="margin-left: 5px;">嘉定区洪德路115号</span>
+                </div>
+                <div class="active-text">
+                    <span style="margin-top: 15px; float: right; margin-right: 10px;">类型：文化活动</span>
+                </div>
+            </li>
+            <li class="list">
+                <h1 style="text-align: center; font-size: 25px;">插画教学</h1>
+                <div class="active-time">
+                    <img src="./images/时钟.svg" style="margin-left: 15px; margin-top: 20px;">
+                    <span style="margin-left:5px;">2024-11-29 13:00-14:00</span>
+                </div>
+                <div class="active-map">
+                    <img src="./images/定位.svg" style="margin-left: 15px;margin-top: 10px;">
+                    <span style="margin-left: 5px;">嘉定区洪德路115号</span>
+                </div>
+                <div class="active-text">
+                    <span style="margin-top: 15px; float: right; margin-right: 10px;">类型：文化活动</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="return">
+        <a href="javascript:history.back()" style="color: brown; font-size: 20px; text-align: center;">返回</a>
+        <a href="javascript:history.back()"><img src="./images/返回.png" style="height: 30px; width:30px; float: inline-end;" ></a>
+    </div>
+  </div>  
+</div>    
+<footer>
+    <div class="web-bottom">
+        <p>版权所有--盗版也追究不了&nbsp;&nbsp;&nbsp;&nbsp;章宁 22本软件3班 202299010658 web期末作品 党服网站</p>
+    </div>
+</footer>
+</body>
+<script>
+    let items = document.querySelectorAll('.item');
+    let current = 0;
+    function showSlide() {
+        items.forEach(item => {
+            item.style.transform = `translateX(-${current * 100}%)`;
+        });
+        updateDots();
+    }
+    function prevSlide() {
+        if (current > 0) {
+            current--;
+        } else {
+            current = items.length - 1;
+        }
+        showSlide();
+    }
+    function nextSlide() {
+        if (current < items.length - 1) {
+            current++;
+        } else {
+            current = 0;
+        }
+        showSlide();
+    }
+    let timer = setInterval(nextSlide, 1000);
+    function pauseTimer() {
+        clearInterval(timer);
+    }
+    function resumeTimer() {
+        timer = setInterval(nextSlide, 1000);
+    }
+    document.getElementById('carousel').addEventListener('mouseover', pauseTimer);
+    document.getElementById('carousel').addEventListener('mouseout', resumeTimer);
+    let dots = document.querySelectorAll('.dots li'); 
+    function updateDots() {
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        dots[current].classList.add('active');
+    }
+    function jumpToSlide(index) {
+        current = index;
+        showSlide();
+        updateDots();
+    }
+</script>
+</html>

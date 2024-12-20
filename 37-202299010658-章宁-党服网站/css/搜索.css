@@ -1,0 +1,136 @@
+/*党群服务阵地*/
+.tubiao{
+    position: absolute;
+    top: 28px;
+    width: 100px;
+    left: 490px;
+}
+/*首页导航文字*/
+.index-text{
+position:absolute;
+top: 40%;
+transition: all 0.5s ease;
+}
+.index-text1:hover{
+    transform: scale(1.1);
+    margin-left: -35px;
+}
+.index-text2:hover{
+
+    transform: scale(1.1);
+    margin-left: -50px;
+}
+.index-text3:hover{
+
+    transform: scale(1.1);
+    margin-left: -70px;
+}
+.index-text4:hover{
+
+    transform: scale(1.1);
+    margin-left: -85px;
+}
+.index-text5:hover{
+    transform: scale(1.1);
+    margin-left: -100px;
+}
+/**/
+a {
+text-decoration: none;
+}
+/*------------------------本项目公共样式----------------------------*/
+.sousuo {
+width: 700px;
+height: 350px;
+box-sizing: border-box;
+margin-left: 340px;
+}
+
+/*搜索栏*/
+.sea-container {
+position: relative;
+width: 720px;
+height: 50px;
+margin-top: 70px;
+margin-left: 370px;
+border: 1px solid gray;
+}
+.blue-input {
+float: left;
+width: 620px;
+height: 50px;
+padding-left: 20px;
+box-sizing: border-box;
+
+}
+.blue-button {
+width: 100px;
+height: 50px;
+background-color: red;
+color: white;
+font-size: 15px;
+}
+/*选择栏*/
+.xuanzelan{
+height: 30px;
+width: 720px;
+margin-left: 370px;
+margin-top: 70px;
+border-bottom: solid 5px brown;
+}
+.butt1{
+font-size: 25px;
+height: 30px;
+width: 70px;
+font-family:serif;
+font-weight: bold;
+float: left;
+text-align: center;
+font-style: red;
+}
+.butt{
+font-size: 25px;
+height: 30px;
+font-family:serif;
+font-weight: bold;
+margin-left: 50px;
+float: left;
+font-style: red;
+}
+.butt1:hover{
+background-color: rgb(155, 155, 155);
+}
+.butt:hover{
+background-color: rgb(155, 155, 155);
+}
+/* 搜索下拉框*/
+ul#drop {
+list-style: none;
+margin: 0;
+padding: 0;
+border: solid 1px grey;
+}
+ul#drop li {
+width: 600px;
+margin: 0;
+padding: 10px;
+border: solid 1px grey;
+}
+ul#drop li:hover {
+background-color: darkgrey;
+width:600px;
+}
+p#selectedId {
+display: inline-block;
+}
+/*页脚*/
+.web-bottom{
+background-color:#fff;
+height: 20px;
+width: 600px;
+position: absolute;
+margin-top: 260px;
+margin-left: 560px;
+color: gray;
+font-size: 12px;
+}
